@@ -144,15 +144,15 @@ print("\n")
 # Доверительные интервалы
 print("Доверительные интервалы")
 alpha = 0.95
-t = 0.1826 
-min_value = sample_mean - ((sigma * t) / count)
-max_value = sample_mean + ((sigma * t) / count)
+t = 1.96 
+min_value = sample_mean - ((sigma * t) / math.sqrt(count))
+max_value = sample_mean + ((sigma * t) / math.sqrt(count))
 print(f"{min_value} < m < {max_value}")
 
 t = 1.971956544249395    
 s = corrected_standard_deviation
-min_value = sample_mean - ((s * t) / count)
-max_value = sample_mean + ((s * t) / count)
+min_value = sample_mean - ((s * t) / math.sqrt(count))
+max_value = sample_mean + ((s * t) / math.sqrt(count))
 print(f"{min_value} < m < {max_value}")
 
 t = 1.971956544249395    
